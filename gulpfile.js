@@ -31,10 +31,7 @@ function clean() {
 }
 
 function watch(event) {
-  console.log(
-    "File " + event.path + " was " + event.type + ", running tasks..."
-  );
-  styles();
+  gulp.watch("src/**/*.scss", styles);
 }
 
 exports.clean = clean;
